@@ -3,47 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPOCH 26 Card Backs</title>
+    <title>EPOCH 26.COM - Awaiting Launch</title>
+    
+    <meta name="description" content="EPOCH 26: The Human Time System Game. A revolutionary new card game concept from Stork Family Products.">
+    
     <style>
+        /* CSS to ensure the image covers the entire 16:9 viewport */
         body {
-            /* Using a light gray background for contrast, since the original request was "no backgrounds" (meaning no surrounding white space/border in the image itself). */
-            background-color: #f0f0f0; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            /* 1. Set the background image. The file must be named 'blanket-image-epoch-26.jpg' */
+            background-image: url('blanket-image-epoch-26.jpg'); 
+            
+            /* 2. SCALING: Scales the image to cover the entire viewport, preserving its aspect ratio. */
+            background-size: cover; 
+            
+            /* 3. POSITIONING: Centers the image within the viewport. */
+            background-position: center center; 
+            
+            /* 4. BEHAVIOR: Ensures the image doesn't scroll and prevents repetition. */
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            
+            /* Ensure the body fills the entire browser window */
+            min-height: 100vh;
             margin: 0;
-            flex-direction: row; /* Arrange cards horizontally */
+            padding: 0;
+            
+            /* Basic styling for hidden text content */
+            color: white; 
+            font-family: Arial, sans-serif;
         }
-        .card-container {
-            display: flex;
-            gap: 20px; /* Space between the two cards */
-        }
-        .card {
-            /* You will need to replace the 'src' attribute with the actual path or URL to your image file. */
-            width: 300px; /* Adjust size as needed */
-            height: auto;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Optional: Adds depth */
-            border-radius: 15px; /* Matches rounded card corners */
-        }
-        h1 {
+
+        /* Styling for the central "Under Construction" message */
+        .coming-soon-message {
             position: absolute;
-            top: 20px;
-            color: #333;
+            top: 50%;
+            left: 50%;
+            /* Centers the element perfectly */
+            transform: translate(-50%, -50%); 
+            text-align: center;
+            padding: 20px;
+            /* Semi-transparent black box for high readability over the image */
+            background: rgba(0, 0, 0, 0.6); 
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        
+        p {
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
-    <h1>EPOCH 26 Card Back Designs</h1>
     
-    <div class="card-container">
-        <img class="card" 
-             src="PLACEHOLDER_URL_FOR_RED_CARD_IMAGE" 
-             alt="Red Letter Card Back (EPOCH 26)">
-        
-        <img class="card" 
-             src="PLACEHOLDER_URL_FOR_GREEN_CARD_IMAGE" 
-             alt="Green Number Card Back (EPOCH 26)">
+    <div class="coming-soon-message">
+        <h1>EPOCH 26.COM</h1>
+        <p>A secret project by Stork Family Products is under construction.</p>
+        <p>Estimated Launch: HTS 2026</p>
     </div>
 
 </body>
