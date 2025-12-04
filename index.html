@@ -8,30 +8,50 @@
     <meta name="description" content="EPOCH 26: The Human Time System Game. A revolutionary new card game concept from Stork Family Products.">
     
     <style>
-        /* CSS to ensure the image covers the entire 16:9 viewport */
+        /* --- 1. DEFAULT/FALLBACK STYLES --- */
+        /* This sets a background color that will fill any gaps or appear instantly. */
+        /* REPLACE #2c3e50 WITH A COLOR that matches your blanket image. */
         body {
-            /* 1. Set the background image. The file must be named 'blanket-image-epoch-26.jpg' */
-            background-image: url('blanket-image-epoch-26.jpg'); 
-            
-            /* 2. SCALING: Scales the image to cover the entire viewport, preserving its aspect ratio. */
-            background-size: cover; 
-            
-            /* 3. POSITIONING: Centers the image within the viewport. */
-            background-position: center center; 
-            
-            /* 4. BEHAVIOR: Ensures the image doesn't scroll and prevents repetition. */
-            background-attachment: fixed; 
-            background-repeat: no-repeat;
-            
-            /* Ensures the body fills the entire browser window and has no scrollbars */
+            background-color: #2c3e50; /* Dark color for uniform edges */
             min-height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Crucial to prevent scrolling when only an image is present */
+            overflow: hidden; 
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- 2. LANDSCAPE (HORIZONTAL) VIEW STYLES (Your Default 16:9) --- */
+        /* This applies when the viewport is wider than it is tall (like a computer screen or rotated phone). */
+        @media (orientation: landscape) {
+            body {
+                /* Your main 16:9 blanket image */
+                background-image: url('blanket-image-epoch-26.jpg'); 
+                background-size: cover; 
+                background-position: center center; 
+                background-attachment: fixed; 
+                background-repeat: no-repeat;
+            }
+        }
+
+        /* --- 3. PORTRAIT (VERTICAL) VIEW STYLES (For Mobile Phones) --- */
+        /* This applies when the viewport is taller than it is wide (phone held normally). */
+        @media (orientation: portrait) {
+            body {
+                /* OPTION A: Solid Color (Simplest Solution) */
+                /* Keeps the background color defined in the default body style above. */
+                
+                /* OPTION B: Use a Dedicated Mobile Image (Better Look) */
+                /* We swap the image for one specifically designed for a tall aspect ratio (e.g., 9:16) */
+                background-image: url('mobile-background.jpg'); 
+                background-size: cover; 
+                background-position: center center;
+                background-attachment: fixed; 
+                background-repeat: no-repeat;
+            }
         }
     </style>
 </head>
 <body>
     
-    </body>
+</body>
 </html>
